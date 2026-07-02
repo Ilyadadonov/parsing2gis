@@ -1,0 +1,13 @@
+aiogram==3.13.1
+asyncpg==0.30.0
+sqlalchemy[asyncio]==2.0.36
+alembic==1.14.0
+google-auth==2.37.0
+google-api-python-client==2.157.0
+gspread==6.1.4
+aiohttp>=3.9.0,<3.11
+pydantic>=2.4.1,<2.10
+pydantic-settings==2.7.0
+python-dotenv==1.0.1
+tenacity==9.0.0
+structlog==24.4.0
