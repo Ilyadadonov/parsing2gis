@@ -68,7 +68,7 @@ CITY_COORDS: dict[str, str] = {
     "Краснодар": "38.975313,45.035470",
 }
 
-CITY_RADIUS = 25000
+CITY_RADIUS = 40000
 
 
 @dataclass
