@@ -1,5 +1,6 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 import json
+import base64
 
 
 class Settings(BaseSettings):
@@ -36,7 +37,11 @@ class Settings(BaseSettings):
 
     @property
     def google_credentials(self) -> dict:
-        return json.loads(self.google_service_account_json)
+        raw = self.google_service_account_json.strip()
+        if raw.startswith("{"):
+            return json.loads(raw)
+        decoded = base64.b64decode(raw).decode("utf-8")
+        return json.loads(decoded)
 
 
 settings = Settings()
